@@ -1,1 +1,2 @@
-# My_notes_app
+How do I run the project:
+Click the green ▶ Play button at the top toolbar in Android Studio but before that, I had to make sure I have an emulator set up by going to Device Manager (the phone icon on the right sidebar) and creating a virtual device if I haven't already (Pixel 6, API 34 works well for beginners). Once I click Run, Android Studio will build the project, install it on the emulator, and launch the app automatically and the whole process takes about 30–60 seconds the first time.
