@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml
+     Part 3: ListView to display notes
+     Part 1: Buttons as UI components
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Header bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#3F51B5"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Notes"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- About button (navigates to AboutActivity) -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textColor="#3F51B5"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="onAboutClicked" />
+    </LinearLayout>
+
+    <!-- Hint shown when list is empty -->
+    <TextView
+        android:id="@+id/textViewEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="No notes yet.\nTap 'Add Note' to get started!"
+        android:textSize="16sp"
+        android:textColor="#9E9E9E"
+        android:visibility="gone" />
+
+    <!-- Part 3: ListView displaying custom note items -->
+    <ListView
+        android:id="@+id/listViewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp" />
+
+    <!-- Long press hint -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Long press a note to delete it"
+        android:textSize="12sp"
+        android:textColor="#9E9E9E"
+        android:gravity="center"
+        android:padding="4dp" />
+
+    <!-- Add Note button -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Add Note"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F51B5"
+        android:layout_margin="12dp"
+        android:onClick="onAddNoteClicked" />
+
+</LinearLayout>

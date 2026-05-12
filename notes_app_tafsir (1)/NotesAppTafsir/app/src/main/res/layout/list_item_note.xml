@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- list_item_note.xml
+     Part 3: Custom layout component for each ListView row.
+     Includes: title, category tag, content preview, and importance ImageView.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:minHeight="72dp">
+
+    <!-- Star icon (ImageView) shown when note is important -->
+    <ImageView
+        android:id="@+id/imageImportant"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="Important" />
+
+    <!-- Note title -->
+    <TextView
+        android:id="@+id/textItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_toStartOf="@id/imageImportant"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Category badge -->
+    <TextView
+        android:id="@+id/textItemCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textItemTitle"
+        android:layout_marginTop="2dp"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:background="#9C27B0"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp" />
+
+    <!-- Short content preview -->
+    <TextView
+        android:id="@+id/textItemPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textItemCategory"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        android:textColor="#757575"
+        android:layout_toStartOf="@id/imageImportant"
+        android:layout_marginEnd="8dp" />
+
+</RelativeLayout>
